@@ -1,0 +1,159 @@
+%**********************************************
+%Choose appropriate document class:
+
+%For B.Tech ==> \documentclass[BTech]{iiitdmdiss}
+%For DD ==> \documentclass[DD]{iiitdmdiss}
+%For M.Tech ==> \documentclass[MTech]{iiitdmdiss}
+
+%**********************************************
+\documentclass[MTech, hidelinks]{iiitdmdiss}
+%\documentclass[DD]{iiitdmdiss}
+% \documentclass[BTech]{iiitdmdiss}
+\usepackage{times}
+\usepackage{tikz}
+\usepackage{t1enc}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{fancyhdr}
+\usepackage[driverfallback=dvipdfm]{hyperref} % hyperlinks for references.
+\usepackage{amsmath} % easier math formulae, align, subequations \ldots
+
+\usepackage{booktabs}
+
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title page
+%-----------------------------------------------
+% Provide all the necessary information here
+%-----------------------------------------------
+\title{Gender classification using GAIT}
+\author{Vimalraj S, E S Sarveswara Rao}
+\roll{CS23M1007, CS23M1008}
+% \author{Vimalraj S}
+% \roll{CS23M1007}
+% \author{E S Sarveswara Rao}
+% \roll{CS23M1008}
+\monthyear{MAY 2024}
+\department{Computer Science and Engineering with specialization in Data Science and AI}
+\guide{Dr. Rahul Raman}
+\guidedesignation{Assistant Professor}
+\guidedept{Computer Science and Engineering}
+\date{15.05.2024}
+
+%\nocite{*}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Declaration of originality
+\declaration
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Certificate
+\certificate
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Abstract
+\abstract
+
+Gender classification is in high demand because of its
+versatility. It can be used as a surveillance system for security. It
+can also be used to classify customers in retail establishments. In
+this work, we propose a new gender classification technique from
+a gait silhouette using observation angle-based GEIs. The system
+consists of two main parts: the observation angle classification
+model and the gender classification model. The observation angle
+classification generates 10 observation angle-based GEIs. The
+gender classification model uses angle-based GEIs to predict
+gender. The proposed methods perform well with freestyle walks
+which contain a viewpoint issue.
+\\
+\vspace{10pt}
+\noindent KEYWORDS: \hspace*{0.5em} \parbox[t]{4.4in}{Gender classification, Gait, Gender recognition, GEI, CNN, Freestyle Walk}
+
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Table of contents etc.
+
+\begin{singlespace}
+\tableofcontents
+\thispagestyle{empty}
+
+\listoftables
+\addcontentsline{toc}{chapter}{LIST OF TABLES}
+\listoffigures
+\addcontentsline{toc}{chapter}{LIST OF FIGURES}
+\end{singlespace}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abbreviations
+\abbreviations
+
+\noindent 
+\begin{tabbing}
+xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
+\textbf{GEI}   \> Gait Energy Image\\
+\textbf{CNN}   \> Convolutional Neural Network\\
+
+\end{tabbing}
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Notation
+
+\notation
+\noindent
+\begin{singlespace}
+\begin{tabbing}
+xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
+\textbf{$\lambda$}  \> wavelength \\
+
+\end{tabbing}
+\end{singlespace}
+
+\pagebreak
+\clearpage
+
+% The main text will follow from this point so set the page numbering
+% to arabic from here on.
+\pagenumbering{arabic}
+\pagestyle{fancy}
+\fancyhf{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Enter the details of roll number, department and year for Header and Footer
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fancyhead[l]{\leftmark}
+\fancyfoot[r]{\thepage}
+\fancyhead[r]{CS23M1007, CS23M1008}
+\fancyfoot[l]{Department of CSE, IIITDM Kancheepuram, May 2024}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{Chapter1/chapter1}
+\input{Chapter2/chapter2}
+\input{Chapter3/chapter3}
+\input{Chapter4/chapter4}
+\input{Chapter5/chapter5}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography.
+
+\begin{singlespace}
+  \bibliography{References}
+\end{singlespace}
+
+\end{document}

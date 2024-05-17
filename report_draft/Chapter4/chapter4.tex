@@ -1,0 +1,70 @@
+\chapter{EVALUATION AND COMPARISON}
+\graphicspath{{Chapter4/}}
+
+\section{Evaluation Metrics}
+\subsection{Confusion Matrix}
+For the gender classification from gait using observation angle-based GEIs project, the confusion matrix will be a valuable metric to evaluate the performance of the proposed method. A confusion matrix provides a comprehensive breakdown of the classification results, allowing for a detailed analysis of the model's accuracy and potential errors.
+
+In the context of this binary classification task (male or female), the confusion matrix will be a 2x2 table that summarizes the counts of true positives (TP), true negatives (TN), false positives (FP), and false negatives (FN). The rows of the matrix represent the actual classes (male or female), while the columns represent the predicted classes.
+
+The confusion matrix will provide the following information:
+\begin{itemize}
+    \item True Positives
+    \item True Negatives
+    \item False Positives
+    \item False Negatives
+    \item Accuracy
+    \item Precision
+    \item Recall
+    \item F1 Score
+\end{itemize}
+\subsection{True Positives}
+The number of instances where the model correctly predicted the gender as male for actual male samples.
+
+\subsection{True Negatives}
+The number of instances where the model correctly predicted the gender as female for actual female samples.
+
+\subsection{False Positives}
+The number of instances where the model incorrectly predicted the gender as male for actual female samples.
+
+\subsection{False Negatives}
+The number of instances where the model incorrectly predicted the gender as female for actual male samples.
+
+From the confusion matrix, several evaluation metrics can be derived to assess the performance of the proposed method:
+
+\subsection{Accuracy}
+The overall proportion of correct predictions, calculated as (TP + TN) / (TP + TN + FP + FN).
+
+\subsection{Precision}
+The proportion of true positives among all positive predictions, calculated as TP / (TP + FP) for each class.
+
+\subsection{Recall}
+The proportion of actual positives that are correctly identified, calculated as TP / (TP + FN) for each class.
+
+\subsection{F1 Score}
+The harmonic mean of precision and recall, providing a balanced measure of overall performance.
+
+By analyzing the confusion matrix and these derived metrics, the researchers can gain insights into the strengths and weaknesses of the proposed method. They can identify specific cases where the model struggles, such as mis classifying males as females or vice versa, and potentially investigate the underlying reasons behind these errors.
+
+Furthermore, the confusion matrix can be used to compare the performance of the proposed method with existing techniques or baseline models, allowing for a comprehensive evaluation and bench marking of the approach.
+
+Overall, the confusion matrix will serve as a valuable tool for assessing the gender classification performance of the proposed observation angle-based GEI method, enabling the researchers to quantify and analyze the results, identify areas for improvement, and demonstrate the effectiveness of their approach.
+
+
+\section{Comparison between models trained on different angles}
+
+\begin{table}
+    \centering
+    \input{data/comparison.tex}
+    \caption{Comparison of metrics while using different angles}
+    \label{fig:comp}
+\end{table}
+
+\begin{table}
+    \centering
+    \input{data-3/comparison.tex}
+    \caption{Comparison of metrics while using different angles, using 3-channel GEI}
+    \label{fig:comp-3}
+\end{table}
+
+As shown in \ref{fig:comp} and \ref{fig:comp-3} the accuracy increases while using 3-channel GEI only at 90 degrees, stays the same at 72 degrees and decreases for all other angles.
